@@ -11,11 +11,11 @@ Many antenna/array modeling and beamforming problems can be abstracted into a tw
 1. **Phasor superposition (interference)** to obtain direction-dependent complex field $S$,
 2. Construct scalar objective $y$ in the form of **total energy** or power for optimization.
 
-This script implements complex arithmetic using **pure real tensors with separated real/imaginary parts**, constructing
+This script implements complex arithmetic using **pure real tensors with separated real/imaginary parts**, constructing:
 
-$$
+$
 X(x) = c_0 + \sum_k c_{1,k}x_k + \sum_{i<j} c_{2,ij}x_ix_j + \cdots + \sum_{i_1<\cdots<i_5}c_{5,i_1\cdots i_5}\prod_t x_{i_t}
-$$
+$
 
 (supporting up to 5th-order terms, $x\in\mathbb{R}^K$, each $c_\bullet\in\mathbb{C}$), then applying linear transformation with complex matrix $b\in\mathbb{C}^{M\times N}$ to obtain
 
